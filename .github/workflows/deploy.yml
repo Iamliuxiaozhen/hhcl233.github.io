@@ -1,6 +1,6 @@
 name: 部署到GitHub Pages
 
-# 触发条件：当推送到main分支时
+# 触发条件： 当推送到main分支时
 on:
   push:
     branches: [main]
