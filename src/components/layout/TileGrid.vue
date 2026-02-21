@@ -2,11 +2,14 @@
 import { wintile } from 'web-win-vue';
 import 'web-win-vue/style.css'
 import { useContentdialogStore } from '@/stores/contentdialog';
+import { ref, onMounted } from 'vue'
 
 const copyWriting = {
     'meInfo': '你好!<br>掌握技术栈/语言: Vue3,Python,GDScript,JavaScript(TypeScript)',
     'whyRebuild': '由于旧页面存在众多问题<br>因此重构了该网站',
-    'easterEgg': '奇怪的彩蛋<br>这里没有东西'
+    'easterEgg': '奇怪的彩蛋<br>这里没有东西',
+    'noPage': '这里还没有完工!',
+    'notice': '这里还没有完工,因此部分内容可能会缺失~'
 }
 const contentdialogStore = useContentdialogStore()
 function setContentDialog(title: string, content: string) {
@@ -35,6 +38,12 @@ function goUrl(url: string) {
             <p class="group-grid-title">其他信息</p>
             <div class="group-grid-tiles">
                 <wintile title="为什么要重构个人主页?" @click="setContentDialog('个人简介', copyWriting.whyRebuild)"></wintile>
+            </div>
+        </div>
+        <div id="introduction-grid" class="group-grid">
+            <p class="group-grid-title">友情链接</p>
+            <div class="group-grid-tiles">
+                <wintile title="暂无" @click="setContentDialog('干什么!', copyWriting.noPage)"></wintile>
             </div>
         </div>
         <div id="introduction-grid" class="group-grid">
