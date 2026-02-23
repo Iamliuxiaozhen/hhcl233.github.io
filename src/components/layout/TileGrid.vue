@@ -33,7 +33,11 @@ function goUrl(url: string) {
                         <img src="/Github.png" alt="GitHub" class="tile-icon">
                     </template>
                 </wintile>
-                <wintile title="bilibili" @click="goUrl('https://space.bilibili.com/1832637844')"></wintile>
+                <wintile title="bilibili" @click="goUrl('https://space.bilibili.com/1832637844')">
+                    <template #icon>
+                        <img src="/b.png" alt="Bilibili" class="tile-icon">
+                    </template>
+                </wintile>
                 <wintile title="个人简介" @click="setContentDialog('个人简介', copyWriting.meInfo)"></wintile>
                 <wintile title="?" @click="setContentDialog('?', copyWriting.easterEgg)"></wintile>
             </div>
