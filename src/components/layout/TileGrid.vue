@@ -44,7 +44,9 @@ function goUrl(url: string) {
                 </wintile>
                 <wintile title="bilibili" @click="goUrl('https://space.bilibili.com/1832637844')">
                     <template #icon>
-                        <img src="/b.png" alt="Bilibili" class="tile-icon">
+                        <svg width="24" height="24" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                            <image width="512" height="512" x="0" y="0" xlink:href="/b.svg" />
+                        </svg>
                     </template>
                 </wintile>
                 <wintile title="个人简介" @click="setContentDialog('个人简介', copyWriting.meInfo)"></wintile>
