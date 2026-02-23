@@ -28,7 +28,11 @@ function goUrl(url: string) {
         <div id="introduction-grid" class="group-grid">
             <p class="group-grid-title">个人信息</p>
             <div class="group-grid-tiles">
-                <wintile title="Github" @click="goUrl('https://github.com/HHCL233')"></wintile>
+                <wintile title="Github" @click="goUrl('https://github.com/HHCL233')">
+                    <template #icon>
+                        <img src="/Github.png" alt="GitHub" class="tile-icon">
+                    </template>
+                </wintile>
                 <wintile title="bilibili" @click="goUrl('https://space.bilibili.com/1832637844')"></wintile>
                 <wintile title="个人简介" @click="setContentDialog('个人简介', copyWriting.meInfo)"></wintile>
                 <wintile title="?" @click="setContentDialog('?', copyWriting.easterEgg)"></wintile>
@@ -78,5 +82,12 @@ function goUrl(url: string) {
 .group-grid-title {
     margin: 8px 0;
     font-size: larger;
+}
+
+.tile-icon {
+    width: 32px;
+    height: 32px;
+    vertical-align: middle;
+    margin-right: 8px;
 }
 </style>
